@@ -31,7 +31,6 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
         docker build -t gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA .
         docker push gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
 
